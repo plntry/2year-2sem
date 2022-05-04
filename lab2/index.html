@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab2. Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lab2styles.css">
+</head>
+<body style="background: #ffffff;">
+<h3 class="text-center">IS-02</h3>
+<h4 class="text-center">Nedilko, Oleshchenko</h4>
+<div class="container" style="padding: 50px 170px 50px 170px; border: 1px solid #cbcbcb; margin-top: 25px; height: 50%; width: auto; background: #eeece2">
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 nopadding">
+            <input type="text" name="fieldToCalculate" id="fieldToCalculate" class="form-control" style="padding: 10px; font-size: 30px; height: 50px">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2 col-sm-offset-2 nopadding">
+            <button id="one" class="btn btn-warning btn-block btn_font" onclick="UserClickButton('1')">1</button>
+        </div>
+        <div class="col-sm-2 nopadding">
+            <button id="two" class="btn btn-warning btn-block btn_font" onclick="UserClickButton('2')">2</button>
+        </div>
+        <div class="col-sm-2 nopadding">
+            <button id="three" class="btn btn-warning btn-primary btn-block btn_font" onclick="UserClickButton('3')">3</button>
+        </div>
+        <div class="col-sm-2 nopadding">
+            <button id="divide" class="btn btn-info btn-block btn_font" onclick='UserClickButton("/")'>÷</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2 col-sm-offset-2 nopadding">
+            <button id="four" class="btn btn-warning btn-block btn_font" onclick='UserClickButton("4")'>4</button>
+        </div>
+        <div class="col-sm-2 nopadding">
+            <button id="five" class="btn btn-warning btn-block btn_font" onclick='UserClickButton("5")'>5</button>
+        </div>
+        <div class="col-sm-2 nopadding">
+            <button id="six" class="btn btn-warning btn-block btn_font" onclick='UserClickButton("6")'>6</button>
+        </div>
+        <div class="col-sm-2 nopadding">
+            <button id="multiply" class="btn btn-info btn-block btn_font" onclick='UserClickButton("*")'>×</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2 col-sm-offset-2 nopadding">
+            <button id="seven" class="btn btn-warning btn-block btn_font" onclick='UserClickButton("7")'>7</button>
+        </div>
+        <div class="col-sm-2 nopadding">
+            <button id="eight" class="btn btn-warning btn-block btn_font" onclick='UserClickButton("8")'>8</button>
+        </div>
+        <div class="col-sm-2 nopadding">
+            <button id="nine" class="btn btn-warning btn-block btn_font" onclick='UserClickButton("9")'>9</button>
+        </div>
+        <div class="col-sm-2 nopadding">
+            <button id="minus" class="btn btn-info btn-block btn_font" onclick='UserClickButton("-")'>-</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2 col-sm-offset-2 nopadding">
+            <button id="dot" class="btn btn-warning btn-block btn_font" onclick='UserClickButton(".")'>.</button>
+        </div>
+        <div class="col-sm-2 nopadding">
+            <button id="zero" class="btn btn-warning btn-block btn_font" onclick='UserClickButton("0")'>0</button>
+        </div>
+        <div class="col-sm-2 nopadding">
+            <button id="changeSign" class="btn btn-warning btn-block btn_font" onclick='UserClickButton("*(-1)")'>+/-</button>
+        </div>
+        <div class="col-sm-2 nopadding">
+            <button id="add" class="btn btn-info btn-block btn_font" onclick='UserClickButton("+")'>+</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 nopadding">
+            <button id="equal" class="btn btn-success btn-block btn_font" style="height: 65px; " onclick='CalculateValue()'>=</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 nopadding">
+            <button class="btn btn-danger btn-block" style="height: 65px; font-weight: bolder" onclick='ClearData()'>CLEAN</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2" id="history_log"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
