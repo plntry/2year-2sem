@@ -1,0 +1,9 @@
+GET http://localhost:3001/api/books
+
+###
+POST http://localhost:3001/api/books
+
+Content-Type: application/json
+{
+    "name": "k;fffjfdkkfdsghln", "number": "841563"
+}
