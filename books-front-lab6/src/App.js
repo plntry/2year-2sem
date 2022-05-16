@@ -87,7 +87,7 @@ const App = () => {
             )
             setTimeout(() => {
               setMessage(null)
-            }, 5000)
+            }, 3000)
 
             setBooks(books.map(book => book.id !== changedBook.id ? book : returnedBook))
           })

@@ -39,32 +39,30 @@ morgan.token('book', (req, res) => {
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms :book'))
 
 app.get('/info', (request, response) => {
-    Book.find({}).then(books => {
+  Book.find({}).then(books => {
     response.send(`
-      <p>Phonebook has info for ${books.length} people</p>
+      <p>Library has info for ${books.length} books</p>
       <p>${new Date()}</p>
     `)
-  })
-
-  
+  })  
 })
 
 app.get('/api/books', (request, response) => {
-    Book.find({}).then(books => {
-        response.json(books)
-    })
+  Book.find({}).then(books => {
+    response.json(books)
+  })
 })
 
 app.get('/api/books/:id', (request, response, next) => {
-    Book.findById(request.params.id)
-        .then(book => {
-            if (book) {
-            response.json(book)
-            } else {
-            response.status(404).end()
-            }
-        })
-        .catch(error => next(error))
+  Book.findById(request.params.id)
+    .then(book => {
+      if (book) {
+        response.json(book)
+      } else {
+        response.status(404).end()
+      }
+    })
+    .catch(error => next(error))
 })
 
 app.put('/api/books/:id', (request, response, next) => {
@@ -94,7 +92,7 @@ app.post('/api/books', (request, response) => {
   const body = request.body
 
   if (body.name === undefined || body.number === undefined) {
-    return response.status(400).json({ error: 'missing name or number' })
+    return response.status(400).json({ error: 'missing name or number of pages' })
   }
 
   const book = new Book({
