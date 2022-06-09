@@ -1,5 +1,0 @@
-GET http://localhost:3001/api/books
-
-###
-
-DELETE http://localhost:3001/api/books/4
