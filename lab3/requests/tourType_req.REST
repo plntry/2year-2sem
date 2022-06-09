@@ -1,3 +1,4 @@
+// Create new tour type
 POST /tourType/create HTTP/1.1
 Host: localhost:3000
 Content-Type: application/x-www-form-urlencoded
@@ -7,4 +8,5 @@ name=Inclusive tour
 
 ###
 
+// Get all tour types
 GET http://localhost:3000/tourType/get
