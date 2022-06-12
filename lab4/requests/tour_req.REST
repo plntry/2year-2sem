@@ -1,0 +1,27 @@
+// Create new tour
+POST /tour/create HTTP/1.1
+Host: localhost:3000
+Content-Type: application/x-www-form-urlencoded
+
+name=Crystal Flora Beach Resort&price=132&numberOfDays=10&tourType=1&country=1
+
+###
+
+// Get all tours
+GET http://localhost:3000/tour/get
+
+###
+
+// Search tour by name
+GET /tour/search/Crystal Flora Beach Resort HTTP/1.1
+Host: localhost:3000
+
+###
+
+// Delete tour
+POST /tour/delete HTTP/1.1
+Host: localhost:3000
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 4
+
+id=7
